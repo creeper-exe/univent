@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Univent</title>
+<meta name="description" content="Talk to a Univent engineer — 0100 606 3909, ehab@univent.com.eg, 337 El Sudan St, Ahmed Orabi, El Mohandessin, Giza. Send airflow, static pressure and application for a fan selection." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preload" href="assets/fonts/Gellix-TRIAL-Regular.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="assets/fonts/Gellix-TRIAL-SemiBold.otf" as="font" type="font/otf" crossorigin />
+<link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<!-- HEADER:START -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Univent home">
+      <img src="assets/logo.png" alt="Univent" />
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="products.html">Products</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="projects.html">Our Clients</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="is-active" aria-current="page">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="contact.html">Request a quote</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<!-- HEADER:END -->
+
+<main id="top">
+
+<!-- ══════════════════ PAGE HERO ══════════════════ -->
+<section class="page-hero">
+  <div class="hero-lines page-lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 575" preserveAspectRatio="none">
+      <path d="M-40,600 C340,590 520,520 660,370 C800,220 960,120 1480,80" />
+      <path d="M-40,640 C360,630 540,560 690,400 C840,240 1000,140 1480,110" />
+      <path d="M-40,690 C380,680 570,600 720,430 C870,260 1040,160 1480,140" />
+      <path d="M-40,740 C400,730 600,640 750,460 C900,280 1080,180 1480,170" />
+    </svg>
+  </div>
+  <div class="glow glow-a" aria-hidden="true"></div>
+
+  <div class="wrap page-hero-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span>
+    </nav>
+    <span class="eyebrow">Get in touch</span>
+    <h1>Talk to an<br /><span class="accent">engineer</span></h1>
+    <p class="lede">
+      Phone, email or the workshop door in Mohandessin — whichever suits. Selections,
+      quotations and certificate copies all come from the same team.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ QUOTE FORM ══════════════════
+     The form does not post anywhere. It composes a WhatsApp message out of
+     the fields and hands it to wa.me, so the enquiry lands in the same
+     inbox the team already watches. Nothing leaves the browser until the
+     person presses send inside WhatsApp. -->
+<section class="quote" id="quote-form">
+  <div class="bloom bloom--tr" aria-hidden="true"></div>
+
+  <div class="wrap quote-grid">
+    <div>
+      <span class="eyebrow">Request a quote</span>
+      <h2 class="quote-title">Send it straight to<br />an engineer<i class="dot">.</i></h2>
+      <p class="quote-note">
+        Fill in whatever you know. The button opens WhatsApp with your details already
+        written out — nothing is sent until you press send there.
+      </p>
+
+      <form class="quote-form" id="wa-form" novalidate>
+        <div class="field">
+          <label for="q-name">Name <b aria-hidden="true">*</b></label>
+          <input id="q-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+        </div>
+
+        <div class="field">
+          <label for="q-company">Company</label>
+          <input id="q-company" name="company" type="text" autocomplete="organization" placeholder="Optional" />
+        </div>
+
+        <div class="field">
+          <label for="q-contact">Phone or email</label>
+          <input id="q-contact" name="contact" type="text" placeholder="So we can follow up" />
+        </div>
+
+        <div class="field">
+          <label for="q-application">Application</label>
+          <select id="q-application" name="application">
+            <option value="">Select…</option>
+            <option>Residential</option>
+            <option>Commercial / offices</option>
+            <option>Healthcare</option>
+            <option>Car park / tunnel</option>
+            <option>Industrial / process</option>
+            <option>Smoke extraction (EN 12101-3)</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="q-airflow">Airflow</label>
+          <div class="field-split">
+            <input id="q-airflow" name="airflow" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 5000" />
+            <select name="airflowUnit" aria-label="Airflow unit">
+              <option>CFM</option><option>m³/h</option><option>L/s</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="q-pressure">Static pressure</label>
+          <div class="field-split">
+            <input id="q-pressure" name="pressure" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 250" />
+            <select name="pressureUnit" aria-label="Pressure unit">
+              <option>Pa</option><option>mmWG</option><option>inWG</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="q-model">Model, if you know it</label>
+          <input id="q-model" name="model" type="text" placeholder="e.g. BXV, TST, MPC T" />
+        </div>
+
+        <div class="field">
+          <label for="q-quantity">Quantity</label>
+          <input id="q-quantity" name="quantity" type="number" min="1" step="1" placeholder="Optional" />
+        </div>
+
+        <div class="field field--full">
+          <label for="q-message">Anything else</label>
+          <textarea id="q-message" name="message" rows="4" placeholder="Site, timing, or anything else we should know"></textarea>
+        </div>
+
+        <div class="field field--full quote-actions">
+          <button class="btn btn-primary btn-arrow" type="submit">Send on WhatsApp</button>
+          <a class="btn btn-ghost" id="wa-email" href="mailto:ehab@univent.com.eg">Send by email instead</a>
+        </div>
+
+        <p class="quote-status" id="wa-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="quote-aside">
+      <h3>Or reach us directly</h3>
+      <a class="quote-line" href="https://wa.me/201006063909" target="_blank" rel="noopener">
+        <small>WhatsApp</small><strong>0100 606 3909</strong>
+      </a>
+      <a class="quote-line" href="tel:+201006063909">
+        <small>Phone</small><strong>0100 606 3909</strong>
+      </a>
+      <a class="quote-line" href="tel:+201090054330">
+        <small>Phone</small><strong>0109 005 4330</strong>
+      </a>
+      <a class="quote-line" href="mailto:ehab@univent.com.eg">
+        <small>Email</small><strong>ehab@univent.com.eg</strong>
+      </a>
+      <div class="quote-line quote-line--static">
+        <small>Address</small>
+        <strong>337 El Sudan St, Ahmed Orabi<br />El Mohandessin, Giza</strong>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ══════════════════ WHAT TO SEND ══════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Before you write</span>
+      <h2>What to <span class="accent">include</span></h2>
+      <p class="section-sub">
+        Three numbers turn an enquiry into a selection on the same day.
+      </p>
+    </div>
+
+    <div class="sector-grid">
+      <article class="sector reveal">
+        <div class="sector-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h11a3 3 0 1 0-3-3" /><path d="M3 13h14a3 3 0 1 1-3 3" /><path d="M3 18h7" />
+          </svg>
+        </div>
+        <h3>Airflow</h3>
+        <p>
+          How much air the system needs, in CFM or m³/h — per fan, not for the whole
+          building.
+        </p>
+      </article>
+
+      <article class="sector reveal">
+        <div class="sector-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8.5" /><path d="M12 12 15.5 8.5" /><path d="M12 3.5v2" /><path d="M20.5 12h-2" /><path d="M3.5 12h2" />
+          </svg>
+        </div>
+        <h3>Static pressure</h3>
+        <p>
+          The resistance created by ducts, bends, filters and dampers. The same CFM at a
+          different pressure can need a different fan.
+        </p>
+      </article>
+
+      <article class="sector reveal">
+        <div class="sector-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 20.5V9l8-5.5L20 9v11.5" /><path d="M4 20.5h16" /><path d="M9.5 20.5v-6h5v6" />
+          </svg>
+        </div>
+        <h3>Application</h3>
+        <p>
+          Residential, healthcare, car park, tunnel or process air — and whether smoke
+          extraction certification is required.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html"><img src="assets/logo.png" alt="Univent" /></a>
+      <p>
+        At Univent we are dedicated to placing Egyptian products at the forefront of
+        high-quality manufacturing — making "Made in Egypt" a hallmark of excellence,
+        recognised and trusted worldwide.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products.html?cat=axial">Axial &amp; duct fans</a>
+      <a href="products.html?cat=didw">Centrifugal fans</a>
+      <a href="products.html?cat=smoke">Smoke &amp; jet fans</a>
+      <a href="products.html?cat=filters">Filters &amp; accessories</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Univent</a>
+      <a href="about.html#engineering">Engineering</a>
+      <a href="about.html#partnership">Ruck partnership</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certifications</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+201006063909">0100 606 3909</a>
+      <a href="tel:+201090054330">0109 005 4330</a>
+      <a href="mailto:ehab@univent.com.eg">ehab@univent.com.eg</a>
+      <span>337 El Sudan St, Giza</span>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Univent. All rights reserved.</span>
+    <span>Quality is everything. Quality you can trust.</span>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script src="script.js"></script>
+</body>
+</html>

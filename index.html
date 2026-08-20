@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Univent — Moving air since 1979</title>
+<meta name="description" content="Univent manufactures ventilation and smoke extraction fans in Egypt since 1979. Residential, healthcare and industrial solutions. Official distributor for Ruck-Germany." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preload" href="assets/fonts/Gellix-TRIAL-Regular.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="assets/fonts/Gellix-TRIAL-SemiBold.otf" as="font" type="font/otf" crossorigin />
+<link rel="stylesheet" href="styles.css" />
+<!-- Arms the scroll-reveal styles before first paint. If scripting is off
+     or script.js fails, .reveal never hides and the page reads normally.
+
+     .hero-armed does the same for the hero entrance, and only ever lands on
+     this page — hero-air.js uses it to reach the shared header. The failsafe
+     drops it if the animation never runs, so the hero can't stay blank. -->
+<script>
+  var de = document.documentElement;
+  de.classList.add("js");
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    de.classList.add("hero-armed");
+    setTimeout(function () { de.classList.remove("hero-armed"); }, 4000);
+  }
+</script>
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/hero-air.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER:START -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Univent home">
+      <img src="assets/logo.png" alt="Univent" />
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="products.html">Products</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="projects.html">Our Clients</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="contact.html">Request a quote</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<!-- HEADER:END -->
+
+<!-- Reading position under the header. Scroll-driven, so it only ever exists
+     in browsers that can run it off the main thread. -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- The page index, in the right gutter: one hairline per chapter, the name
+     arriving on hover. Desktop only — landing.js marks the chapter you are in
+     and flips the rail over the ink one at the end. -->
+<nav class="rail" id="rail" aria-label="Page sections">
+  <a class="rail-item" href="#hero"><span class="rail-label">Air</span></a>
+  <a class="rail-item" href="#company"><span class="rail-label">Company</span></a>
+  <a class="rail-item" href="#products"><span class="rail-label">Products</span></a>
+  <a class="rail-item" href="#proof"><span class="rail-label">Proof</span></a>
+  <a class="rail-item" href="#installed"><span class="rail-label">Installed</span></a>
+  <a class="rail-item" href="#quote"><span class="rail-label">Quote</span></a>
+</nav>
+
+<main id="top">
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="hero" data-chapter="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="wrap hero-inner">
+
+    <!-- Two columns: the whole type stack on the left, the product shot on the
+         right, top and bottom edges shared. -->
+    <div class="hero-stage">
+
+      <div class="hero-text">
+        <!-- AIR. is rasterised from this markup into the shader; keep it on one
+             line, with no whitespace around the dot, or the raster picks it up. -->
+        <h1 class="hero-title">
+          <span class="hero-title__we" data-hero-we>WE ENGINEER</span>
+          <span class="hero-title__air" data-hero-air-line><span class="hero-air" data-hero-air>AIR<span class="hero-air__dot">.</span></span></span>
+        </h1>
+
+        <div class="hero-body">
+          <p class="hero-lede" data-hero-fade>
+            Ventilation and smoke&nbsp;extraction fans, engineered and manufactured in
+            Egypt since 1979. Tell us the duty point — airflow, static pressure,
+            application — and our engineers return a selection, a curve and a price.
+          </p>
+          <div class="hero-actions" data-hero-fade>
+            <a class="btn btn-primary btn-arrow" href="contact.html">Request a quote</a>
+            <a class="btn btn-ghost" href="products.html">View products</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-figure" data-hero-fade>
+        <img src="assets/hero-fan.webp" alt="Univent cased axial fan"
+             width="1100" height="1005" decoding="async" />
+      </div>
+
+    </div>
+
+    <!-- Client strip: the .marquee machinery is shared with projects.html.
+         The second set is the seamless-loop duplicate, hidden from AT. -->
+    <div class="hero-clients" data-hero-fade>
+      <!-- the strip is full-bleed, so the label needs its own .wrap to line up
+           with the headline column above it -->
+      <div class="wrap">
+        <p class="eyebrow hero-clients__label">Trusted by industry leaders</p>
+      </div>
+      <div class="marquee" aria-label="Selected clients">
+        <div class="marquee-track">
+          <div class="marquee-set">
+            <img src="assets/clients/ArmedForces.png" alt="Armed Forces" width="1100" height="600" />
+            <img src="assets/clients/Asfour.png" alt="Asfour Crystal" width="1100" height="600" />
+            <img src="assets/clients/ArabContractors.png" alt="Arab Contractors" width="1100" height="600" />
+            <img src="assets/clients/Carrefour.png" alt="Carrefour" width="1100" height="600" />
+            <img src="assets/clients/Sodic.png" alt="Sodic" width="1100" height="600" />
+            <img src="assets/clients/Samsung.png" alt="Samsung" width="1100" height="600" />
+            <img src="assets/clients/Elsweedy.png" alt="Elsewedy Cables" width="1100" height="600" />
+            <img src="assets/clients/Travco.png" alt="Travco Group" width="1100" height="600" />
+            <img src="assets/clients/Americana.png" alt="Americana" width="1100" height="600" />
+            <img src="assets/clients/Metro.png" alt="Metro" width="1100" height="600" />
+            <img src="assets/clients/EgyptAir.png" alt="EgyptAir" width="1100" height="600" />
+            <img src="assets/clients/TBS.png" alt="TBS" width="1100" height="600" />
+          </div>
+          <div class="marquee-set" aria-hidden="true">
+            <img src="assets/clients/ArmedForces.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Asfour.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/ArabContractors.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Carrefour.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Sodic.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Samsung.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Elsweedy.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Travco.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Americana.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/Metro.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/EgyptAir.png" alt="" loading="lazy" width="1100" height="600" />
+            <img src="assets/clients/TBS.png" alt="" loading="lazy" width="1100" height="600" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ COMPANY ══════════════════
+     Head as a spread, the rating plate under it, and the plant across the
+     full width to close. Not the hero's shape: the hero sets type beside a
+     figure, this one stacks type over a ledger over a horizon. -->
+<section class="chapter" id="company" data-chapter="company">
+  <div class="bloom bloom--tr" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="chapter-head--split">
+      <div>
+        <p class="spec reveal">Company — Giza, Egypt · est. 1979</p>
+        <h2 class="chapter-title reveal reveal-lines">
+          <span class="line"><span>We build what</span></span>
+          <span class="line"><span>we specify<i class="dot">.</i></span></span>
+        </h2>
+      </div>
+      <div>
+        <p class="chapter-lede reveal">
+          Univent has pressed, balanced and tested fans in one plant in Giza since 1979.
+          Forty-five models leave that floor — from residential units to 400°C smoke and
+          tunnel jet fans — and where the local range stops we supply the Ruck&nbsp;Germany
+          programme we're the official distributor for. One supplier, and the engineer
+          who sized the fan answers the phone about it.
+        </p>
+        <p class="chapter-foot reveal">
+          <a class="link-arrow" href="about.html">About Univent</a>
+        </p>
+      </div>
+    </div>
+
+    <ul class="plate">
+      <li class="reveal"><b>1979</b><span>Manufacturing since</span></li>
+      <li class="reveal"><b>45</b><span>Models in the range</span></li>
+      <li class="reveal"><b>12</b><span>Product families</span></li>
+      <li class="reveal"><b>400°C</b><span>Smoke rated, 2 hours</span></li>
+    </ul>
+
+    <figure class="band reveal">
+      <img src="assets/factory.webp"
+           alt="The Univent plant in Giza, its loading bay open onto the assembly floor"
+           width="1536" height="1024" loading="lazy" decoding="async" />
+    </figure>
+    <p class="cap reveal">Giza plant — pressing, balancing and testing under one roof</p>
+  </div>
+</section>
+
+<!-- ══════════════════ PRODUCTS ══════════════════
+     The range is not repeated here — products.html holds all forty-five, and
+     the button goes there. One fan, lit the way the hero lights its own. -->
+<section class="chapter" id="products" data-chapter="products">
+  <div class="bloom bloom--bl" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="showcase">
+      <div>
+        <p class="spec reveal">Products — 45 models, 12 families</p>
+
+        <h2 class="chapter-title reveal reveal-lines">
+          <span class="line"><span>Twelve families.</span></span>
+          <span class="line"><span>One duty point<i class="dot">.</i></span></span>
+        </h2>
+
+        <p class="chapter-lede reveal">
+          Axial and duct fans, centrifugal and mixed flow units, roof tops, air curtains,
+          filters, and smoke and tunnel jet fans rated 400°C for two hours. Give us the
+          airflow and the static pressure your system actually sees and you get back the
+          model, its curve, and the point you'll be running on it.
+        </p>
+
+        <p class="chapter-foot reveal">
+          <a class="btn btn-primary btn-arrow" href="products.html">View all products</a>
+        </p>
+      </div>
+
+      <div>
+        <div class="showcase-figure reveal">
+          <img src="assets/products/TST.png" alt="Univent TST 400°C smoke extraction fan"
+               width="500" height="500" loading="lazy" decoding="async" />
+        </div>
+        <p class="cap cap--center reveal">TST — 400°C/2h smoke fan, one of forty-five</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CERTIFICATIONS ══════════════════
+     The documents are not reproduced here either — all 24 are on
+     certificates.html. The short chapter on purpose: a held breath between
+     the fan and the strip of buildings. -->
+<section class="chapter chapter--short chapter--center" id="proof" data-chapter="proof">
+  <div class="bloom bloom--tr" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <p class="spec reveal">Certifications — 9 accreditations, 24 documents</p>
+
+    <h2 class="chapter-title reveal reveal-lines">
+      <span class="line"><span>Proof, on paper<i class="dot">.</i></span></span>
+    </h2>
+
+    <p class="chapter-lede reveal">
+      Type tests, conformity certificates and calibration data — published in full and
+      free to download, rather than "available on request", so nothing on your submittal
+      waits on us.
+    </p>
+
+    <ul class="creds reveal">
+      <li>ISO 9001:2018</li>
+      <li>EN 12101-3</li>
+      <li>ATJC type test</li>
+      <li>EOS conformity</li>
+      <li>MCL calibration</li>
+      <li>UDEM LVD / EMC</li>
+      <li>NOPWASD</li>
+      <li>Ruck agency</li>
+    </ul>
+
+    <p class="chapter-foot reveal">
+      <a class="btn btn-primary btn-arrow" href="certificates.html">View certifications</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ INSTALLED ══════════════════
+     A strip of buildings you push sideways. Native horizontal scroll, so a
+     thumb, a trackpad and the tab key all move it without any script. -->
+<section class="chapter" id="installed" data-chapter="installed">
+  <div class="wrap">
+    <div class="chapter-head--split">
+      <div>
+        <p class="spec reveal">Installed — hotels, plants, factories, campuses</p>
+        <h2 class="chapter-title reveal reveal-lines">
+          <span class="line"><span>Installed, and</span></span>
+          <span class="line"><span>still running<i class="dot">.</i></span></span>
+        </h2>
+      </div>
+      <p class="chapter-lede reveal">
+        Our fans move air in hotels on the Red Sea, paint and crystal factories, a car
+        plant and a university campus — supplied, commissioned, and still on duty. Six
+        of them here; the rest are on the projects page.
+      </p>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Installations">
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/Inter.png" alt="Intercontinental Sharm El Sheikh hotel" loading="lazy" />
+      <b>Hospitality</b><span>Intercontinental Sharm El Sheikh</span>
+    </a>
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/GM.png" alt="GM Motors Egypt plant" loading="lazy" />
+      <b>Automotive</b><span>GM Motors Egypt — 6th of October</span>
+    </a>
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/Asfour.png" alt="Asfour Crystal factory" loading="lazy" />
+      <b>Manufacturing</b><span>Asfour Crystal — Factories 1 &amp; 2</span>
+    </a>
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/Novotel.png" alt="Novotel Cairo Airport" loading="lazy" />
+      <b>Hospitality</b><span>Novotel Cairo Airport</span>
+    </a>
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/Pachin.png" alt="Pachin Paints factory" loading="lazy" />
+      <b>Industrial</b><span>Pachin Paints Factory</span>
+    </a>
+    <a class="site reveal" href="projects.html">
+      <img src="assets/projects/Ahram.png" alt="Al Ahram University campus" loading="lazy" />
+      <b>Education</b><span>Al Ahram University</span>
+    </a>
+  </div>
+
+  <div class="wrap">
+    <div class="strip-foot">
+      <a class="link-arrow reveal" href="projects.html">See where else we work</a>
+      <span class="index-note reveal">Scroll sideways — 6 of many</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ REQUEST A QUOTE ══════════════════
+     The page opens on paper and closes on ink. The plate returns inverted:
+     up top it holds what Univent is, here it holds the three things we need
+     before a fan can be sized. -->
+<section class="chapter chapter--ink" id="quote" data-chapter="quote" data-theme="dark">
+  <div class="bloom bloom--c bloom--ink" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <p class="spec spec--light reveal">Request a quote — answered by an engineer</p>
+
+    <h2 class="chapter-title chapter-title--xl reveal reveal-lines">
+      <span class="line"><span>Send us the</span></span>
+      <span class="line"><span>duty point<i class="dot">.</i></span></span>
+    </h2>
+
+    <p class="chapter-lede reveal">
+      Three things start it: what the system has to move, what it has to push against,
+      and what it serves. You get back a selection, the curve and a price.
+    </p>
+
+    <ul class="plate plate--ask">
+      <li class="reveal"><b>Airflow</b><span>m³/h or CFM</span></li>
+      <li class="reveal"><b>Static pressure</b><span>Pascals</span></li>
+      <li class="reveal"><b>Application</b><span>What the fan serves</span></li>
+    </ul>
+
+    <div class="ask-actions reveal">
+      <a class="btn btn-invert btn-arrow" href="contact.html">Request a quote</a>
+      <a class="btn btn-light" href="products.html">Browse the range first</a>
+    </div>
+
+    <p class="ask-contact reveal">
+      <a href="tel:+201006063909">0100 606 3909</a>
+      <a href="tel:+201090054330">0109 005 4330</a>
+      <a href="mailto:ehab@univent.com.eg">ehab@univent.com.eg</a>
+      <span>337 El Sudan St, Giza</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html"><img src="assets/logo.png" alt="Univent" /></a>
+      <p>
+        At Univent we are dedicated to placing Egyptian products at the forefront of
+        high-quality manufacturing — making "Made in Egypt" a hallmark of excellence,
+        recognised and trusted worldwide.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products.html?cat=axial">Axial &amp; duct fans</a>
+      <a href="products.html?cat=didw">Centrifugal fans</a>
+      <a href="products.html?cat=smoke">Smoke &amp; jet fans</a>
+      <a href="products.html?cat=filters">Filters &amp; accessories</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Univent</a>
+      <a href="about.html#engineering">Engineering</a>
+      <a href="about.html#partnership">Ruck partnership</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certifications</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+201006063909">0100 606 3909</a>
+      <a href="tel:+201090054330">0109 005 4330</a>
+      <a href="mailto:ehab@univent.com.eg">ehab@univent.com.eg</a>
+      <span>337 El Sudan St, Giza</span>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Univent. All rights reserved.</span>
+    <span>Quality is everything. Quality you can trust.</span>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script src="script.js"></script>
+<script src="assets/js/landing.js" defer></script>
+</body>
+</html>
